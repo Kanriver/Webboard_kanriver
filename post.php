@@ -10,9 +10,11 @@
     <hr>
     <div style="text-align: center;">
         ต้องการดูกระทู้หมายเลข <?php echo $_GET['id']; ?> <br><br>
+    </div>
+    <div>
         <table style="border: 2px solid black; width: 40%;" align="center">
             <tr style="background-color: #6CD2FE;"><td colspan="2">แสดงความคิดเห็น</td></tr>
-            <tr><td><textarea name="massage" cols="50" rows="10"></textarea></td></tr>
+            <tr><td align="center"><textarea name="massage" cols="50" rows="10"></textarea></td></tr>
             <tr><td colspan="2" align="center"><input type="submit" value="ส่งข้อความ"></td></tr>
         </table>
     </div><br>
