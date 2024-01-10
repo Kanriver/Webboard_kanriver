@@ -9,7 +9,17 @@
     <h1 style="text-align: center;">WebBoard GoodGame</h1>
     <hr>
     <div style="text-align: center;">
-        ต้องการดูกระทู้หมายเลข <?php echo $_GET['id']; ?> <br><br>
+        ต้องการดูกระทู้หมายเลข <?php echo $_GET['id']; ?> <br>
+        <?php
+        $n = $_GET['id'];
+        if(($n%2)==0){
+            echo "เป็นกระทู้หมายเลขคู่";
+        }
+        else{
+            echo "เป็นกระทู้หมายเลขคี่";
+        }
+        ?>
+        <br><br>
     </div>
     <div>
         <table style="border: 2px solid black; width: 40%;" align="center">
