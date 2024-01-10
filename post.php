@@ -29,7 +29,7 @@
         </table>
     </div><br>
     <div style="text-align: center;">
-    <a href="index.html">กลับไปหน้าหลัก</a>
+    <a href="index.php">กลับไปหน้าหลัก</a>
     </div>
 </body>
 </html>
