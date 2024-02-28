@@ -22,6 +22,18 @@
     <div class="row mt-4">
         <div class="col-lg-3 col-md-2 col-sm-1"></div>
         <div class="col-lg-6 col-md-8 col-sm-10">
+            <?php
+                if(isset($_SESSION['add_login'])){
+                    if($_SESSION['add_login']=="error"){
+                        echo "<div class='alert alert-danger'>
+                                ชื่อบัญชีซํ้าหรือฐานข้อมูลมีปัญหา</div>";
+                    }else{
+                        echo "<div class='alert alert-success'>
+                                เพิ่มบัญชีเรียบร้อยแล้ว</div>";
+                    }
+                    unset($_SESSION['add_login']);
+                }
+            ?>
             <div class="card border-primary">
                 <div class="card-header bg-primary text-white">เข้าสู่ระบบ</div>
                 <div class="card-body">
@@ -71,7 +83,7 @@
                             <div class="col-lg-12 d-flex justify-content-center">
                                 <button type="submit" class="btn btn-primary btn-sm me-2">
                                     <i class="bi bi-save"></i> สมัครสมาชิก</button>
-                                <button type="submit" class="btn btn-danger btn-sm me-2">
+                                <button type="reset" class="btn btn-danger btn-sm me-2">
                                     <i class="bi bi-x-square"></i> ยกเลิก</button>
                             </div>
                         </div>

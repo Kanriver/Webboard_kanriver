@@ -34,7 +34,7 @@
                     <form action="verify.php" method="post">
                         <div class="form-group ">
                             <label for="Login" class="form-label">Login:</label>
-                            <input type="text" name="user" id="Login" class="form-control">
+                            <input type="text" name="login" id="Login" class="form-control">
                         </div>
                         <div class="form-group mt-2">
                             <label for="pwd" class="form-label">Password:</label>
