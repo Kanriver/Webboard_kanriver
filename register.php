@@ -14,8 +14,19 @@
     <script src="bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title>Register</title>
+    
 </head>
 <body>
+    <script>
+        function OnBlurPwd(){
+            let pwd  = document.getElementById("pwd");
+            let pwd2 = document.getElementById("pwd2");
+            if(pwd.value!==pwd2.value){
+                alert("รหัสผ่านทั้ง 2 ช่องไม่ตรงกัน");
+                pwd2.value="";
+            }
+        }
+    </script>
     <div class="container">
     <h1 style="text-align: center;" class="mt-3">Webboard GoodGame</h1>
     <?php include "nav.php" ?>
@@ -50,6 +61,12 @@
                                 <input id="pwd" type="password" name="pwd" class="form-control" required>
                             </div>
                         </div>
+                        <div class="row mt-3">
+                            <label for="pwd" class="col-lg-3 col-form-label">ใส่รหัสผ่านซํ้า :</label>
+                            <div class="col-lg-9">
+                                <input id="pwd2" type="password" name="pwd2" onblur="OnBlurPwd()" class="form-control" required>
+                            </div>
+                        </div> 
                         <div class="row mt-3">
                             <label for="name" class="col-lg-3 col-form-label">ชื่อ-นามสกุล :</label>
                             <div class="col-lg-9">
