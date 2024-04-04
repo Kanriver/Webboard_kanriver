@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 01, 2024 at 08:42 AM
+-- Generation Time: Apr 04, 2024 at 10:20 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.0.28
 
@@ -39,7 +39,9 @@ CREATE TABLE `category` (
 INSERT INTO `category` (`id`, `name`) VALUES
 (1, 'เรื่องทั่วไป'),
 (2, 'เรื่องเรียน'),
-(3, 'เรื่องกีฬา');
+(3, 'เรื่องกีฬา'),
+(5, 'เรื่องกิน'),
+(6, 'เรื่องความรัก');
 
 -- --------------------------------------------------------
 
@@ -77,7 +79,11 @@ CREATE TABLE `post` (
 INSERT INTO `post` (`id`, `title`, `content`, `post_date`, `cat_id`, `user_id`) VALUES
 (1, 'ทำถึง', 'ถึงได้ทำ', '2024-04-01 13:38:53', 1, 1),
 (2, 'เรียนถึง', 'ถึงได้เรียน', '2024-04-01 13:39:09', 2, 1),
-(3, 'วิ่งถึง', 'ถึงได้วิ่ง', '2024-04-01 13:39:26', 3, 1);
+(3, 'Liverpool', 'ทำถึงได้เป็นแชมป์พรีเมียร์ 2024', '2024-04-01 13:39:26', 3, 1),
+(4, 'ประกวดนางงาม', 'สวยฉํ่ามาก\r\n', '2024-04-05 02:14:48', 1, 2),
+(5, 'A ทุกวิชา', 'เก่งสุดๆ', '2024-04-05 02:17:04', 2, 2),
+(6, 'แบดมินตัน', '2-1 ยังเอาไม่ลง', '2024-04-05 02:17:58', 3, 2),
+(7, 'ประกาศจาก แอดมิน', 'มาเล่นกันเยอะๆ นะ', '2024-04-05 02:20:58', 1, 3);
 
 -- --------------------------------------------------------
 
@@ -100,7 +106,9 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `login`, `password`, `name`, `gender`, `email`, `role`) VALUES
-(1, 'kannatee', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', 'Kannatee Rodsutha', 'm', 'Kannatee2546Kan@gmail.com', 'm');
+(1, 'kannatee', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', 'Kannatee Rodsutha', 'm', 'Kannatee2546Kan@gmail.com', 'm'),
+(2, 'suthima', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', 'suthima', 'f', 'suthima@gmail.com', 'm'),
+(3, 'admin', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', 'admin', 'o', 'admin@gmail.com', 'a');
 
 --
 -- Indexes for dumped tables
@@ -138,7 +146,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `comment`
@@ -150,13 +158,13 @@ ALTER TABLE `comment`
 -- AUTO_INCREMENT for table `post`
 --
 ALTER TABLE `post`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
