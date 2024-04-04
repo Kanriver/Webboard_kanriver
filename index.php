@@ -16,6 +16,12 @@
             return r;
         }
     </script>
+    <script>
+        function edittxt(name){
+            var button = document.getElementById('btn');
+            button.innerHTML=name;
+        }
+    </script>
 </head>
 <body>
     <div class="container-lg">
@@ -27,16 +33,17 @@
         <div>
             <label >หมวดหมู่</label>
             <span class="dropdown">
-            <button class="btn btn-light btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <button id="btn" class="btn btn-light btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                 --ทั้งหมด--
             </button>
             <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">ทั้งหมด</a></li>
+                <li><a class="dropdown-item" href="#" onclick="edittxt('ทั้งหมด')">ทั้งหมด</a></li>
                 <?php
                     $conn=new PDO("mysql:host=localhost;dbname=webboard;charset=utf8","root","");
                     $sql="SELECT * FROM category";
                     foreach($conn->query($sql) as $row){
-                        echo "<li><a class=dropdown-item href=#>$row[name]</a></li>";
+                        echo "<li><a class=dropdown-item href=#  onclick=edittxt(\"".htmlentities($row['name'], ENT_QUOTES)."\")
+                        >$row[name]</a></li>";
                     }
                     $conn=null;
                 ?>
